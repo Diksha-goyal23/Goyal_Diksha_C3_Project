@@ -42,7 +42,9 @@ public class Restaurant {
         }
         return null;
     }
+    public int order_total(List<String> items_list){
 
+    }
     public void addToMenu(String name, int price) {
         Item newItem = new Item(name,price);
         menu.add(newItem);

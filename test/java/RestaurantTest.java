@@ -3,6 +3,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,6 +19,7 @@ public void refactor_restaurant_test()
     restaurant =new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
     restaurant.addToMenu("Sweet corn soup",119);
     restaurant.addToMenu("Vegetable lasagne", 269);
+    restaurant.addToMenu("Corn cheese balls",319);
 
 }
     //>>>>>>>>>>>>>>>>>>>>>>>>>OPEN/CLOSED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -62,4 +65,15 @@ public void refactor_restaurant_test()
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //<<<<<<<<<<<<<<<<<<<<<<ORDER TOTAL>>>>>>>>>>>>>>>>>>>>>>>>>
+@Test
+    public void calculate_order_total_of_all_the_selected_items()
+    {
+        List<String> items_list= new ArrayList<String>();
+        items_list.add("Sweet corn soup");
+        items_list.add("Vegetable lasagne");
+
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<ORDER TOTAL>>>>>>>>>>>>>>>>>>>>>>>>>
+
 }
