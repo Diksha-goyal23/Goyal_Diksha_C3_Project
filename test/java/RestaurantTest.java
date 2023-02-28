@@ -2,6 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+import java.io.PrintStream;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -72,8 +73,13 @@ public void refactor_restaurant_test()
         List<String> items_list= new ArrayList<String>();
         items_list.add("Sweet corn soup");
         items_list.add("Vegetable lasagne");
-
+        assertEquals(388,restaurant.order_total(items_list));
     }
     //<<<<<<<<<<<<<<<<<<<<<<ORDER TOTAL>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    @Test
+    public void displaying_details_of_restaurant_to_verify_it_contains_same_as_added_to_the_obj()
+    {
+        restaurant.displayDetails();
+    }
 }
